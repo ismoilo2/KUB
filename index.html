@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="canteyner">
+        <div class="cube">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="front"></div>
+            <div class="back"></div>
+        </div> 
+        <button class="btn1" id="btn1">top</button>
+        <button class="btn2" id="btn2">left</button>
+        <button class="btn3" id="btn3">right</button>
+        <button class="btn4" id="btn4">bottom</button>
+    </div>
+
+
+    <script>
+        let cube=document.querySelector(".cube"),
+            bn1=document.querySelector("#btn1"),
+            bn2=document.querySelector("#btn2"),
+            bn3=document.querySelector("#btn3"),
+            bn4=document.querySelector("#btn4"),
+            x=0,y=0;
+
+            bn1.addEventListener("click", ()=>{
+                x+=90;
+                cube.style.transform=`rotateX(${x}deg) rotateY(${y}deg)`;
+            })
+            bn2.addEventListener("click", ()=>{
+                x-=90;
+                cube.style.transform=`rotateY(${x}deg) rotateY(${y}deg)`;
+            })
+            bn3.addEventListener("click", ()=>{
+                y+=90;
+                cube.style.transform=`rotateY(${x}deg) rotateY(${y}deg)`;
+            })
+            bn4.addEventListener("click", ()=>{
+                y-=90;
+                cube.style.transform=`rotateY(${x}deg) rotateY(${y}deg)`;
+            })
+    </script>
+</body>
+</html>

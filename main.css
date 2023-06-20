@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+.canteyner{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 500px;
+}
+.cube{
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: all 10s;
+    position: relative;
+    top: 40%;
+}  
+
+.cube div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 165, 165, 0.307);
+    border: 2px solid white;
+}
+.top{
+    transform: rotateX(90deg) translateZ(150px);
+}
+.bottom{
+    transform: rotateX(-90deg) translateZ(150px);
+}
+.right{
+    transform: rotateY(90deg) translateZ(150px);
+}
+.left{
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.front{
+    transform: translateZ(150px);
+}
+.back{
+    transform: rotateY(180deg) translateZ(150px);
+}
+button{
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    font-size: 24px;
+    border: none;
+    border-radius: 22px;
+    position: absolute;
+}
+.btn1{
+    left: 120px;
+    top: 20px;
+}
+.btn2{
+    left: -300px;
+    top: 280px;
+}.btn3{
+    left: 530px;
+    top: 280px;
+}.btn4{
+    left: 120px;
+    top: 650px;
+}
